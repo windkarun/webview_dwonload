@@ -1,0 +1,143 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.example.webview"
+        minSdkVersion 22
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+
+    //places
+    implementation 'com.google.android.gms:play-services-places:16.0.0'
+
+    //view injections
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.3.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
+
+    //Retrofit and okHttp Call
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+
+    //sdp ssp
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+
+    // ProfileViewModel and LiveData
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
+
+    // FCM
+    implementation 'com.google.firebase:firebase-core:16.0.4'
+    implementation 'com.google.firebase:firebase-iid:17.0.4'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    implementation 'com.firebase:firebase-jobdispatcher:0.8.5'
+
+    // Crashlytics
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.5'
+    implementation 'com.google.android.gms:play-services-maps:16.0.0'
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+
+    // freshchat
+    implementation 'com.github.freshdesk:freshchat-android:1.4.0'
+    implementation 'com.android.support:design:27.1.1' // design support library
+
+    //room
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+    annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
+
+    //Fabs
+    implementation 'com.github.clans:fab:1.6.4'
+
+    //Firebase
+    implementation 'com.google.firebase:firebase-config:16.1.0'
+
+    //Tabs
+    implementation 'info.hoang8f:android-segmented:1.0.6'
+
+    //Design
+    implementation 'com.android.support:design:27.1.1'
+
+    //CircleImageview
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    //Paging
+    implementation "android.arch.paging:runtime:1.0.1"
+
+    //Smart gps library
+    implementation 'io.nlopez.smartlocation:library:3.3.3'
+    implementation 'com.github.prabhat1707:EasyWayLocation:1.0'
+
+    //Shimmer effect
+    implementation 'io.supercharge:shimmerlayout:2.1.0'
+
+    //CircularProgressBar
+    implementation 'com.jackandphantom.android:circularprogressbar:1.2.0'
+
+    //RazorPay
+    implementation 'com.razorpay:checkout:1.5.1'
+
+    //Gif library
+    implementation 'com.github.Cutta:GifView:1.1'
+
+    //Slider/CarouselView
+    implementation 'com.github.ApendIr:slider:1.0'
+
+    implementation 'com.synnapps:carouselview:0.1.5'
+
+    //Timber
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+
+    //Lokalise
+    //implementation 'com.lokalise.android:ota-sdk:1.3.14'
+
+    //Slider
+    implementation 'com.ss.bannerslider:bannerslider:2.0.0'
+
+    //exoplayer
+
+    implementation 'com.google.android.exoplayer:exoplayer:2.8.0'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.8.0'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.8.0'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.8.0'
+
+
+
+
+
+
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
+}
